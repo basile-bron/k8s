@@ -1,0 +1,16 @@
+
+---
+apiVersion:      # the apiVersion to use
+kind:            # example Pod / Deployment #Pod Deployment Service ReplicationController DeploymentController StatefulSets DaemonSets ConfigMaps Volumes
+metadata:        #A required key that helps uniquely identify the object. Subkeys are name, uid, labels, and namespace.
+  name:          # name to apply
+  labels:
+    name:        # label name
+spec:            # Specifies the desired state of an object. If a spec is deleted, the object will be purged from the system.
+  containers:
+  - name:        # name of container
+    image:       # image to use if no URL provided hub.docker.com is used
+    ports:
+    - name:      # port name
+      containerPort:      # access on this port (int)
+      protocol:           # TCP or UDP (TCP BY DEFAULT)
